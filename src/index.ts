@@ -9,7 +9,7 @@ let app=express();
 app.listen(8000,()=>{
     console.log('app is listening on http://localhost:8000')
 })
-app.use('/', (req: Request, res: Response,next)=>{
+app.use('', (req: Request, res: Response,next)=>{
     console.log('app use');
     next()
 
@@ -20,5 +20,5 @@ app.use('/', (req: Request, res: Response,next)=>{
 })
 app.use('/api', (req: Request, res: Response) => {
     console.log('app use2');
-    // res.send({title:'hero'})
+    res.send({title:'hero'})
 })
